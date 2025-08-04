@@ -8,11 +8,11 @@ The backend is built with Django and Django REST Framework. The frontend will be
 
 The project uses a modular Django structure. Major apps are organized under `src/apps/`, such as:
 
-- users: handles authentication
-- profiles: personal details and QR code
-- documents: identity files like citizenship, PAN, etc.
-- calendar: events and reminders
-- transactions: future support for wallet and payments
+- `auth`: user authentication and permissions
+- `profiles`: personal details and QR code generation
+- `documents`: management of identity documents
+- `calendar`: events and reminders
+- `transactions`: wallet and payment features (future)
 
 ## Status
 
