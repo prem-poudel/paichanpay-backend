@@ -1,0 +1,11 @@
+django
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+django-filter
+drf-spectacular
+Pillow
+python-decouple
+gunicorn
+drf-standardized-errors
+qrcode[pil]
