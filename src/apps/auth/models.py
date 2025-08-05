@@ -52,9 +52,9 @@ class User(BaseModel, AbstractUser, PermissionsMixin):
     )
     qr_code = models.ImageField(upload_to="qr_codes/", blank=True, null=True)
 
-    # Permissions
-    is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
+    # # Permissions
+    # is_active = models.BooleanField(default=True)
+    # is_staff = models.BooleanField(default=False)
 
     objects: UserManager = UserManager()
     USERNAME_FIELD = "email"
