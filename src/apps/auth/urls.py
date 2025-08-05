@@ -4,6 +4,7 @@ from .views import (
     UserLoginView,
     UserProfileView,
     UserLogoutView,
+    UserPublicProfileView
 )
 
 
@@ -12,4 +13,5 @@ urlpatterns = [
     path("login/", UserLoginView.as_view(), name="user-login"),
     path("profile/", UserProfileView.as_view(), name="user-profile"),
     path("logout/", UserLogoutView.as_view(), name="user-logout"),
+    path("public-profile/<int:pk>/", UserPublicProfileView.as_view(), name="user-public-profile"),
 ]

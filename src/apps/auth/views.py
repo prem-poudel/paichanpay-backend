@@ -88,3 +88,7 @@ class UserLogoutView(generics.GenericAPIView):
                 {"detail": "An error occurred while logging out.", "error": str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
+
+class UserPublicProfileView(generics.RetrieveAPIView):
+    serializer_class = UserSerializer
+    permission_classes = []
