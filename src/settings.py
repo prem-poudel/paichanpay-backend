@@ -183,6 +183,7 @@ REST_FRAMEWORK = {
 DRF_STANDARDIZED_ERRORS = {"ENABLE_IN_DEBUG_FOR_UNHANDLED_EXCEPTIONS": True}
 
 # Spectacular settings
+SHOW_SCHEMA = config("SHOW_SCHEMA", default=True, cast=bool)
 SPECTACULAR_SETTINGS = {
     "TITLE": "Paichan Pay -- Prem Poudel",
     "DESCRIPTION": "Developer : Prem Poudel\n\nThis is a RESTful API for Paichan Pay.",
