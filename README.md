@@ -14,6 +14,7 @@ The project uses a modular Django structure. Major apps are organized under `src
 - `calendar`: events and reminders
 - `transactions`: wallet and payment features (future)
 
-## Status
+## Status Update on Recent Edits
 
-The project is under development and not yet ready for production use.
+The project is in the early stages of development.
+- `05 Aug 2025`: The backend is functional with user registration, login, and profile management.

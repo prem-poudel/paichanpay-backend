@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     "corsheaders",
     "drf_spectacular",
+    "src.apps.auth",
 ]
 
 MIDDLEWARE = [
@@ -140,6 +141,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+AUTH_USER_MODEL = "authentication.User"
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = config("CORS_ALLOWED_ORIGINS", default="*", cast=Csv())
@@ -181,6 +183,7 @@ REST_FRAMEWORK = {
 DRF_STANDARDIZED_ERRORS = {"ENABLE_IN_DEBUG_FOR_UNHANDLED_EXCEPTIONS": True}
 
 # Spectacular settings
+SHOW_SCHEMA = config("SHOW_SCHEMA", default=True, cast=bool)
 SPECTACULAR_SETTINGS = {
     "TITLE": "Paichan Pay -- Prem Poudel",
     "DESCRIPTION": "Developer : Prem Poudel\n\nThis is a RESTful API for Paichan Pay.",
