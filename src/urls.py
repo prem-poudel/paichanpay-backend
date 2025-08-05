@@ -17,7 +17,7 @@ urlpatterns = [
     path("redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
     path(f"{api}/", include([
         # Include your app's URLs here
-        
+        path("auth/", include("src.apps.auth.urls")),
     ]),
     ),
 ]
