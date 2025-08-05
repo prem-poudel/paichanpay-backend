@@ -56,10 +56,16 @@ class User(BaseModel, AbstractUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
-    # Timestamps
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
     objects: UserManager = UserManager()
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username", "phone_number", "birth_date", "address"]
+
+    def __str__(self):
+        return self.username
+
+
+class UserModelMixin(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+
+    class Meta:
+        abstract = True
