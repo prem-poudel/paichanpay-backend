@@ -15,6 +15,7 @@ urlpatterns = [
     path(f"{api}/", include([
         # Include your app's URLs here
         path("auth/", include("src.apps.auth.urls")),
+        path("document/", include("src.apps.document.urls")),
     ]),
     ),
 ]
