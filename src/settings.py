@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "drf_spectacular",
     "src.apps.auth",
+    "src.apps.document",
 ]
 
 MIDDLEWARE = [
